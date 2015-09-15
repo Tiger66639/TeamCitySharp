@@ -1,5 +1,5 @@
 #TeamCitySharp
-
+[![Build Status](https://travis-ci.org/Tiger66639/TeamCitySharp.svg)](https://travis-ci.org/Tiger66639/TeamCitySharp)
 *.NET Library to access TeamCity via their REST API.
 
 For more information on TeamCity visit:
