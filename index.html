@@ -3,133 +3,272 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Teamcitysharp by stack72</title>
-
+    <title>Teamcitysharp by Tiger66639</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Teamcitysharp</h1>
-        <p>API for TeamCity</p>
-        <p class="view"><a href="https://github.com/stack72/TeamCitySharp">View the Project on GitHub <small>stack72/TeamCitySharp</small></a></p>
-        <ul>
-          <li><a href="https://github.com/stack72/TeamCitySharp/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/stack72/TeamCitySharp/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/stack72/TeamCitySharp">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>TeamCitySharp</h1>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Tiger66639/TeamCitySharp">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Tiger66639/TeamCitySharp/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Tiger66639/TeamCitySharp/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-<p>*.NET Library to access TeamCity via their REST API.</p>
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Teamcitysharp</h1>
+          <p>API for TeamCity</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Tiger66639">Tiger66639</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="teamcitysharp" class="anchor" href="#teamcitysharp" aria-hidden="true"><span class="octicon octicon-link"></span></a>TeamCitySharp</h1>
+
+<p><a href="https://travis-ci.org/Tiger66639/TeamCitySharp"><img src="https://travis-ci.org/Tiger66639/TeamCitySharp.svg" alt="Build Status"></a>
+*.NET Library to access TeamCity via their REST API.</p>
 
 <p>For more information on TeamCity visit:
 <a href="http://www.jetbrains.com/teamcity">http://www.jetbrains.com/teamcity</a></p>
 
-<h2>License</h2>
+<h2>
+<a id="releases" class="anchor" href="#releases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Releases</h2>
+
+<p>Please find the release notes <a href="https://github.com/stack72/TeamCitySharp/releases">here</a></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p><a href="http://stack72.mit-license.org/">http://stack72.mit-license.org/</a></p>
 
-<h2>Installation</h2>
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>There are 2 ways to use TeamCitySharp:</p>
 
 <ul>
-<li>install-package TeamCitysharp</li>
+<li>install-package TeamCitysharp (via Nuget)</li>
 <li>Download source and compile</li>
-</ul><h2>Sample Usage</h2>
+</ul>
+
+<h2>
+<a id="build-monitor" class="anchor" href="#build-monitor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build Monitor</h2>
 
 <ul>
-<li>To get a list of projects</li>
-</ul><div class="highlight">
-<pre><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TeamCityClient</span><span class="p">(</span><span class="s">"localhost:81"</span><span class="p">);</span>
-<span class="n">client</span><span class="p">.</span><span class="n">Connect</span><span class="p">(</span><span class="s">"admin"</span><span class="p">,</span> <span class="s">"qwerty"</span><span class="p">);</span>
-<span class="kt">var</span> <span class="n">projects</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">AllProjects</span><span class="p">();</span>
-</pre>
-</div>
+<li>There is a sample build monitor built with TeamCitySharp. It can be found at <a href="https://github.com/stack72/TeamCityMonitor">TeamCityMonitor</a>
+</li>
+</ul>
 
+<h2>
+<a id="sample-usage" class="anchor" href="#sample-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Usage</h2>
 
-<ul>
-<li>To get a list of running builds</li>
-</ul><div class="highlight">
-<pre><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TeamCityClient</span><span class="p">(</span><span class="s">"localhost:81"</span><span class="p">);</span>
-<span class="n">client</span><span class="p">.</span><span class="n">Connect</span><span class="p">(</span><span class="s">"admin"</span><span class="p">,</span> <span class="s">"qwerty"</span><span class="p">);</span>
-<span class="kt">var</span> <span class="n">builds</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">BuildsByBuildLocator</span><span class="p">(</span><span class="n">BuildLocator</span><span class="p">.</span><span class="n">RunningBuilds</span><span class="p">());</span>
-</pre>
-</div>
+<p>To get a list of projects</p>
 
+<pre><code>var client = new TeamCityClient("localhost:81");
+client.Connect("admin", "qwerty");
+var projects = client.Projects.All();
+</code></pre>
 
-<h2>Methods Available</h2>
+<p>To get a list of running builds</p>
 
-<div class="highlight">
-<pre><span class="n">List</span><span class="p">&lt;</span><span class="n">Project</span><span class="p">&gt;</span> <span class="n">AllProjects</span><span class="p">();</span>
-<span class="n">Project</span> <span class="nf">ProjectByName</span><span class="p">(</span><span class="kt">string</span> <span class="n">projectLocatorName</span><span class="p">);</span>
-<span class="n">Project</span> <span class="nf">ProjectById</span><span class="p">(</span><span class="kt">string</span> <span class="n">projectLocatorId</span><span class="p">);</span>
-<span class="n">Project</span> <span class="nf">ProjectDetails</span><span class="p">(</span><span class="n">Project</span> <span class="n">project</span><span class="p">);</span>
-<span class="n">Server</span> <span class="nf">ServerInfo</span><span class="p">();</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Plugin</span><span class="p">&gt;</span> <span class="n">AllServerPlugins</span><span class="p">();</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Agent</span><span class="p">&gt;</span> <span class="n">AllAgents</span><span class="p">();</span>
-<span class="n">Build</span> <span class="nf">LastBuildByAgent</span><span class="p">(</span><span class="kt">string</span> <span class="n">agentName</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">VcsRoot</span><span class="p">&gt;</span> <span class="n">AllVcsRoots</span><span class="p">();</span>
-<span class="n">VcsRoot</span> <span class="nf">VcsRootById</span><span class="p">(</span><span class="kt">string</span> <span class="n">vcsRootId</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="n">AllUsers</span><span class="p">();</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Role</span><span class="p">&gt;</span> <span class="n">AllRolesByUserName</span><span class="p">(</span><span class="kt">string</span> <span class="n">userName</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Group</span><span class="p">&gt;</span> <span class="n">AllGroupsByUserName</span><span class="p">(</span><span class="kt">string</span> <span class="n">userName</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Group</span><span class="p">&gt;</span> <span class="n">AllUserGroups</span><span class="p">();</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="n">AllUsersByUserGroup</span><span class="p">(</span><span class="kt">string</span> <span class="n">userGroupName</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Role</span><span class="p">&gt;</span> <span class="n">AllUserRolesByUserGroup</span><span class="p">(</span><span class="kt">string</span> <span class="n">userGroupName</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Change</span><span class="p">&gt;</span> <span class="n">AllChanges</span><span class="p">();</span>
-<span class="n">Change</span> <span class="nf">ChangeDetailsByChangeId</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span><span class="p">);</span>
-<span class="n">Change</span> <span class="nf">LastChangeDetailByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Change</span><span class="p">&gt;</span> <span class="n">ChangeDetailsByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">BuildConfig</span><span class="p">&gt;</span> <span class="n">AllBuildConfigs</span><span class="p">();</span>
-<span class="n">BuildConfig</span> <span class="nf">BuildConfigByConfigurationName</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigName</span><span class="p">);</span>
-<span class="n">BuildConfig</span> <span class="nf">BuildConfigByConfigurationId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">BuildConfig</span> <span class="nf">BuildConfigByProjectNameAndConfigurationName</span><span class="p">(</span><span class="kt">string</span> <span class="n">projectName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">buildConfigName</span><span class="p">);</span>
-<span class="n">BuildConfig</span> <span class="nf">BuildConfigByProjectNameAndConfigurationId</span><span class="p">(</span><span class="kt">string</span> <span class="n">projectName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">BuildConfig</span> <span class="nf">BuildConfigByProjectIdAndConfigurationName</span><span class="p">(</span><span class="kt">string</span> <span class="n">projectId</span><span class="p">,</span> <span class="kt">string</span> <span class="n">buildConfigName</span><span class="p">);</span>
-<span class="n">BuildConfig</span> <span class="nf">BuildConfigByProjectIdAndConfigurationId</span><span class="p">(</span><span class="kt">string</span> <span class="n">projectId</span><span class="p">,</span> <span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">BuildConfig</span><span class="p">&gt;</span> <span class="n">BuildConfigsByProjectId</span><span class="p">(</span><span class="kt">string</span> <span class="n">projectId</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">BuildConfig</span><span class="p">&gt;</span> <span class="n">BuildConfigsByProjectName</span><span class="p">(</span><span class="kt">string</span> <span class="n">projectName</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">SuccessfulBuildsByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">Build</span> <span class="nf">LastSuccessfulBuildByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">FailedBuildsByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">Build</span> <span class="nf">LastFailedBuildByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">Build</span> <span class="nf">LastBuildByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">ErrorBuildsByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">Build</span> <span class="nf">LastErrorBuildByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">BuildConfigsByBuildConfigId</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">BuildConfigsByConfigIdAndTag</span><span class="p">(</span><span class="kt">string</span> <span class="n">buildConfigId</span><span class="p">,</span> <span class="kt">string</span> <span class="n">tag</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">BuildsByUserName</span><span class="p">(</span><span class="kt">string</span> <span class="n">userName</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">BuildsByBuildLocator</span><span class="p">(</span><span class="n">BuildLocator</span> <span class="n">locator</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">AllBuildsSinceDate</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">date</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">AllBuildsOfStatusSinceDate</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">date</span><span class="p">,</span> <span class="n">BuildStatus</span> <span class="n">buildStatus</span><span class="p">);</span>
-<span class="n">List</span><span class="p">&lt;</span><span class="n">Build</span><span class="p">&gt;</span> <span class="n">NonSuccessfulBuildsForUser</span><span class="p">(</span><span class="kt">string</span> <span class="n">userName</span><span class="p">);</span>
-</pre>
-</div>
+<pre><code>var client = new TeamCityClient("localhost:81");
+client.Connect("admin", "qwerty");
+var builds = client.Builds.ByBuildLocator(BuildLocator.RunningBuilds());
+</code></pre>
 
+<h2>
+<a id="connecting-to-a-server" class="anchor" href="#connecting-to-a-server" aria-hidden="true"><span class="octicon octicon-link"></span></a>Connecting to a server</h2>
 
-<h2>Credits</h2>
+<p>To connect as an authenticated user:</p>
+
+<pre><code>var client = new TeamCityClient("localhost:81");
+client.Connect("username", "password");
+</code></pre>
+
+<p>To connect as a Guest:</p>
+
+<pre><code>var client = new TeamCityClient("localhost:81");
+client.ConnectAsGuest();
+</code></pre>
+
+<h2>
+<a id="api-interaction-groups" class="anchor" href="#api-interaction-groups" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Interaction Groups</h2>
+
+<p>There are many tasks that the TeamCity API can do for us. TeamCitySharp groups these tasks into specialist areas</p>
 
 <ul>
-<li>Copyright (c) 2011 Paul Stack (<a href="https://github.com/stack72" class="user-mention">@stack72</a>)</li>
-<li>Thanks to the following contributors:</li>
+<li>Builds</li>
+<li>Projects</li>
+<li>BuildConfigs</li>
+<li>ServerInformation</li>
+<li>Users</li>
+<li>Agents</li>
+<li>VcsRoots</li>
+<li>Changes</li>
+<li>BuildArtifacts</li>
+</ul>
+
+<p>Each area has its own list of methods available</p>
+
+<h3>
+<a id="builds" class="anchor" href="#builds" aria-hidden="true"><span class="octicon octicon-link"></span></a>Builds</h3>
+
+<pre><code>List&lt;Build&gt; SuccessfulBuildsByBuildConfigId(string buildConfigId);
+Build LastSuccessfulBuildByBuildConfigId(string buildConfigId);
+List&lt;Build&gt; FailedBuildsByBuildConfigId(string buildConfigId);
+Build LastFailedBuildByBuildConfigId(string buildConfigId);
+Build LastBuildByBuildConfigId(string buildConfigId);
+List&lt;Build&gt; ErrorBuildsByBuildConfigId(string buildConfigId);
+Build LastErrorBuildByBuildConfigId(string buildConfigId);
+List&lt;Build&gt; ByBuildConfigId(string buildConfigId);
+List&lt;Build&gt; ByConfigIdAndTag(string buildConfigId, string tag);
+List&lt;Build&gt; ByUserName(string userName);
+List&lt;Build&gt; ByBuildLocator(BuildLocator locator);
+List&lt;Build&gt; AllSinceDate(DateTime date);
+List&lt;Build&gt; AllBuildsOfStatusSinceDate(DateTime date, BuildStatus buildStatus);
+List&lt;Build&gt; NonSuccessfulBuildsForUser(string userName);
+Build LastBuildByAgent(string agentName);
+</code></pre>
+
+<h3>
+<a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects</h3>
+
+<pre><code>List&lt;Project&gt; All();
+Project ByName(string projectLocatorName);
+Project ById(string projectLocatorId);
+Project Details(Project project);
+Project Create(string projectName);
+void Delete(string projectName);
+void DeleteProjectParameter(string projectName, string parameterName);
+void SetProjectParameter(string projectName, string settingName, string settingValue);
+</code></pre>
+
+<h3>
+<a id="buildconfigs" class="anchor" href="#buildconfigs" aria-hidden="true"><span class="octicon octicon-link"></span></a>BuildConfigs</h3>
+
+<pre><code>List&lt;BuildConfig&gt; All();
+BuildConfig ByConfigurationName(string buildConfigName);
+BuildConfig ByConfigurationId(string buildConfigId);
+BuildConfig ByProjectNameAndConfigurationName(string projectName, string buildConfigName);
+BuildConfig ByProjectNameAndConfigurationId(string projectName, string buildConfigId);
+BuildConfig ByProjectIdAndConfigurationName(string projectId, string buildConfigName);
+BuildConfig ByProjectIdAndConfigurationId(string projectId, string buildConfigId);
+List&lt;BuildConfig&gt; ByProjectId(string projectId);
+List&lt;BuildConfig&gt; ByProjectName(string projectName);
+BuildConfig CreateConfiguration(string projectName, string configurationName);
+
+void SetConfigurationSetting(BuildTypeLocator locator, string settingName, string settingValue);
+void PostRawArtifactDependency(BuildTypeLocator locator, string rawXml);
+void PostRawBuildStep(BuildTypeLocator locator, string rawXml);
+void PostRawBuildTrigger(BuildTypeLocator locator, string rawXml);
+void SetConfigurationParameter(BuildTypeLocator locator, string key, string value);
+void PostRawAgentRequirement(BuildTypeLocator locator, string rawXml);
+void DeleteBuildStep(BuildTypeLocator locator, string buildStepId);
+void DeleteArtifactDependency(BuildTypeLocator locator, string artifactDependencyId);
+void DeleteAgentRequirement(BuildTypeLocator locator, string agentRequirementId);
+void DeleteParameter(BuildTypeLocator locator, string parameterName);
+void DeleteBuildTrigger(BuildTypeLocator locator, string buildTriggerId);
+
+void SetBuildTypeTemplate(BuildTypeLocator locatorBuildType, BuildTypeLocator locatorTemplate);
+void DeleteSnapshotDependency(BuildTypeLocator locator, string snapshotDependencyId);
+void PostRawSnapshotDependency(BuildTypeLocator locator, XmlElement rawXml);
+BuildConfig BuildType(BuildTypeLocator locator);
+
+void DeleteConfiguration(BuildTypeLocator locator);
+void DeleteAllBuildTypeParameters(BuildTypeLocator locator);
+void PutAllBuildTypeParameters(BuildTypeLocator locator, IDictionary&lt;string, string&gt; parameters);
+void DownloadConfiguration(BuildTypeLocator locator, Action&lt;string&gt; downloadHandler);
+</code></pre>
+
+<h3>
+<a id="serverinformation" class="anchor" href="#serverinformation" aria-hidden="true"><span class="octicon octicon-link"></span></a>ServerInformation</h3>
+
+<pre><code>Server ServerInfo();
+List&lt;Plugin&gt; AllPlugins();
+string TriggerServerInstanceBackup(BackupOptions backupOptions);
+</code></pre>
+
+<h3>
+<a id="users" class="anchor" href="#users" aria-hidden="true"><span class="octicon octicon-link"></span></a>Users</h3>
+
+<pre><code>List&lt;User&gt; All();
+User Details(string userName);
+List&lt;Role&gt; AllRolesByUserName(string userName);
+List&lt;Group&gt; AllGroupsByUserName(string userName);
+List&lt;Group&gt; AllUserGroups();
+List&lt;User&gt; AllUsersByUserGroup(string userGroupName);
+List&lt;Role&gt; AllUserRolesByUserGroup(string userGroupName);
+bool Create(string username, string name, string email, string password);
+bool AddPassword(string username, string password);
+</code></pre>
+
+<h3>
+<a id="agents" class="anchor" href="#agents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Agents</h3>
+
+<pre><code>List&lt;Agent&gt; All();
+</code></pre>
+
+<h3>
+<a id="vcsroots" class="anchor" href="#vcsroots" aria-hidden="true"><span class="octicon octicon-link"></span></a>VcsRoots</h3>
+
+<pre><code>List&lt;VcsRoot&gt; All();
+VcsRoot ById(string vcsRootId);
+VcsRoot AttachVcsRoot(BuildTypeLocator locator, VcsRoot vcsRoot);
+void DetachVcsRoot(BuildTypeLocator locator, string vcsRootId);
+void SetVcsRootField(VcsRoot vcsRoot, VcsRootField field, object value);
+</code></pre>
+
+<h3>
+<a id="changes" class="anchor" href="#changes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changes</h3>
+
+<pre><code>List&lt;Change&gt; All();
+Change ByChangeId(string id);
+Change LastChangeDetailByBuildConfigId(string buildConfigId);
+List&lt;Change&gt; ByBuildConfigId(string buildConfigId);
+</code></pre>
+
+<h3>
+<a id="buildartifacts" class="anchor" href="#buildartifacts" aria-hidden="true"><span class="octicon octicon-link"></span></a>BuildArtifacts</h3>
+
+<pre><code>void DownloadArtifactsByBuildId(string buildId, Action&lt;string&gt; downloadHandler);
+</code></pre>
+
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p>Copyright (c) 2013 Paul Stack (<a href="https://github.com/stack72" class="user-mention">@stack72</a>)</p>
+
+<p>Thanks to the following contributors:</p>
+
+<ul>
 <li>Barry Mooring (<a href="https://github.com/codingbadger" class="user-mention">@codingbadger</a>)</li>
-<li>Simon Bartlett (@sibartlett)</li>
+<li>Simon Bartlett (<a href="https://github.com/sibartlett" class="user-mention">@sibartlett</a>)</li>
+<li>Mike Larah (<a href="https://github.com/MikeLarah" class="user-mention">@MikeLarah</a>)</li>
+<li>Alexander Fast (<a href="https://github.com/mizipzor" class="user-mention">@mizipzor</a>)</li>
+<li>Serge Baltic</li>
+<li>Philipp Dolder</li>
+<li>Mark deVilliers</li>
 </ul>
       </section>
+
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/stack72">stack72</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
 </html>
